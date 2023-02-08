@@ -1,0 +1,53 @@
+.step {
+  color: #fff;
+  display: flex;
+
+  gap: 1rem;
+  text-transform: uppercase;
+}
+
+.number {
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.info {
+  display: none;
+}
+
+.info span {
+  display: block;
+}
+
+.info span:first-child {
+  color: hsl(228, 12%, 76%);
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+
+.info span:last-child {
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 860px) {
+  .step {
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}

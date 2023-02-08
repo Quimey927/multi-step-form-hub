@@ -1,0 +1,55 @@
+.step-actions {
+  position: absolute;
+  bottom: 2rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 10%;
+}
+
+.btn {
+  outline-color: transparent;
+  border: none;
+  padding: 0.85em 1.75em;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.backBtn {
+  background-color: transparent;
+  color: var(--color-cool-gray);
+  transition: color 0.3s ease;
+}
+
+.backBtn:is(:hover, :focus) {
+  color: var(--color-marine-blue);
+}
+
+.nextBtn {
+  color: white;
+  background-color: var(--color-marine-blue);
+  transition: background-color 0.3s ease;
+}
+
+.nextBtn:is(:hover, :focus) {
+  background-color: var(--color-marine-blue-opaque);
+}
+
+.confirmBtn {
+  color: white;
+  background-color: var(--color-purplish-blue);
+  transition: background-color 0.3s ease;
+}
+
+.confirmBtn:is(:hover, :focus) {
+  background-color: var(--color-purplish-blue-opaque);
+}
+
+@media (min-width: 860px) {
+  .step-actions {
+    right: 0;
+  }
+}

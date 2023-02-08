@@ -1,0 +1,22 @@
+.sidebar {
+  background-image: url('../../assets/images/bg-sidebar-mobile.svg');
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+  border-radius: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-top: 3em;
+}
+
+@media (min-width: 860px) {
+  .sidebar {
+    background-image: url('../../assets/images/bg-sidebar-desktop.svg');
+    background-position: bottom;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    padding: 1em;
+  }
+}
