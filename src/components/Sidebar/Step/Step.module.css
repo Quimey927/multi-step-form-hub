@@ -8,8 +8,8 @@
 
 .number {
   background-color: transparent;
-  width: 15px;
-  height: 15px;
+  width: 35px;
+  height: 35px;
   font-size: 0.8rem;
   font-weight: 500;
   border: 1px solid #fff;
@@ -17,6 +17,11 @@
   padding: 0.5rem;
   display: grid;
   place-items: center;
+}
+
+.active {
+  background-color: white;
+  color: var(--color-marine-blue);
 }
 
 .info {
