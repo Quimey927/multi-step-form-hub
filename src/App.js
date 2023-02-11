@@ -7,7 +7,6 @@ import StepActions from './components/StepActions/StepActions';
 import './App.css';
 
 const App = () => {
-  const [step, setStep] = useState(4);
   const [deviceWidth, setDeviceWidth] = useState(null);
 
   // This useEffect is to get the initial devide width. It only runs on the first render
@@ -24,26 +23,11 @@ const App = () => {
     window.addEventListener('resize', handleResize);
   });
 
-  const increaseStepHandler = () => {
-    console.log('Increasing');
-    setStep((prevStep) => prevStep++);
-    console.log(step);
-  };
-
-  const decreaseStepHandler = () => {
-    console.log('Decreasing');
-    setStep((prevStep) => prevStep--);
-  };
-
   const mobileStructure = (
     <Container className="app">
       <Sidebar />
-      <MainContent step={step} />
-      <StepActions
-        step={step}
-        onIncreaseStep={increaseStepHandler}
-        onDecreaseStep={decreaseStepHandler}
-      />
+      <MainContent />
+      <StepActions />
     </Container>
   );
 
@@ -51,8 +35,8 @@ const App = () => {
     <Container className="app">
       <Sidebar />
       <div className="right-column">
-        <MainContent step={step} />
-        <StepActions step={step} />
+        <MainContent />
+        <StepActions />
       </div>
     </Container>
   );
