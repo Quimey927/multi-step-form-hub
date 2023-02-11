@@ -7,7 +7,7 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
-  padding-top: 3em;
+  padding-top: 2em;
 }
 
 @media (min-width: 860px) {
