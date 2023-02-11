@@ -1,38 +1,43 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
+import Button from '../UI/Button/Button';
+import { stepActions } from '../../store/stepSlice';
 import classes from './StepActions.module.css';
 
-const StepActions = ({ step, onIncreaseStep, onDecreaseStep }) => {
+const StepActions = () => {
+  const step = useSelector((state) => state.step.step);
+  const dispatch = useDispatch();
+
   const handleConfirm = () => {
     console.log('Confirmed!');
+  };
+
+  const decrementStepHandler = () => {
+    dispatch(stepActions.decrementStep());
+  };
+
+  const incrementStepHandler = () => {
+    dispatch(stepActions.incrementStep());
   };
 
   return (
     <div className={classes['step-actions']}>
       {step !== 1 ? (
-        <button
-          className={`${classes.btn} ${classes.backBtn}`}
-          onClick={onDecreaseStep}
-        >
+        <Button className={classes.backBtn} onClick={decrementStepHandler}>
           Go Back
-        </button>
+        </Button>
       ) : (
         <button style={{ visibility: 'hidden' }}></button>
       )}
       {step !== 4 ? (
-        <button
-          className={`${classes.btn} ${classes.nextBtn}`}
-          onClick={onIncreaseStep}
-        >
+        <Button className={classes.nextBtn} onClick={incrementStepHandler}>
           Next Step
-        </button>
+        </Button>
       ) : (
-        <button
-          className={`${classes.btn} ${classes.confirmBtn}`}
-          onClick={handleConfirm}
-        >
+        <Button className={classes.confirmBtn} onClick={handleConfirm}>
           Confirm
-        </button>
+        </Button>
       )}
     </div>
   );
