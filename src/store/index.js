@@ -1,14 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 
+import stepReducer from './stepSlice';
 import infoReducer from './infoSlice';
 import planReducer from './planSlice';
-import stepReducer from './stepSlice';
+import addOnsReducer from './addOnsSlice';
 
 const store = configureStore({
   reducer: {
+    step: stepReducer,
     info: infoReducer,
     plan: planReducer,
-    step: stepReducer,
+    addOns: addOnsReducer,
   },
 });
 
