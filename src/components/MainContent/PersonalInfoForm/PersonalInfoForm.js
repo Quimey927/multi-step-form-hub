@@ -25,7 +25,7 @@ const PersonalInfoForm = () => {
 
   return (
     <Container>
-      <form className={classes.form}>
+      <form className={classes.form} onSubmit={handleSubmit}>
         <div className={classes['form-group']}>
           <label htmlFor="name">Name</label>
           <input
