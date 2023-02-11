@@ -2,27 +2,18 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialPlanState = {
   plan: 'Arcade',
-  period: 'Monthly',
+  isMonthly: true,
 };
 
 const planSlice = createSlice({
   name: 'plan',
   initialState: initialPlanState,
   reducers: {
-    setArcade(state) {
-      state.plan = 'Arcade';
+    setPlan(state, action) {
+      state.plan = action.payload;
     },
-    setAdvanced(state) {
-      state.plan = 'Advanced';
-    },
-    setPro(state) {
-      state.plan = 'Pro';
-    },
-    setMonthly(state) {
-      state.period = 'Monthly';
-    },
-    setYearly(state) {
-      state.period = 'Yearly';
+    togglePeriod(state) {
+      state.isMonthly = !state.isMonthly;
     },
   },
 });

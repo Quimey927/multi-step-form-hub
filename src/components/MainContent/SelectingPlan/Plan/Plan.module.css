@@ -1,0 +1,46 @@
+.plan {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  border: 1px solid var(--color-light-gray);
+  cursor: pointer;
+}
+
+.plan:hover {
+  border: 1px solid var(--color-marine-blue);
+}
+
+.plan__icon {
+  width: 35px;
+  height: 35px;
+}
+
+.plan__info * {
+  margin-block: 0.4rem;
+}
+
+.plan__info h3 {
+  color: var(--color-marine-blue);
+  font-size: 0.9rem;
+}
+
+.plan__info h5 {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-cool-gray);
+}
+
+.plan__info p {
+  color: var(--color-marine-blue);
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+@media (min-width: 860px) {
+  .plan {
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: space-between;
+  }
+}
