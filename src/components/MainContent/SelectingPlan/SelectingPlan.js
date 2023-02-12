@@ -35,7 +35,10 @@ const SelectingPlan = () => {
             plan={elem.plan}
             price={elem.price}
             isMonthly={isMonthly}
-            onClick={() => dispatch(planActions.setPlan(elem.plan))}
+            onClick={() => {
+              dispatch(planActions.setPlan(elem.plan));
+              dispatch(planActions.setPrice(elem.price));
+            }}
           />
         ))}
       </div>
