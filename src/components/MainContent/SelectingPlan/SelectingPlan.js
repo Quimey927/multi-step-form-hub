@@ -7,8 +7,7 @@ import classes from './SelectingPlan.module.css';
 
 const SelectingPlan = () => {
   const dispatch = useDispatch();
-  const isMonthly = useSelector((state) => state.plan.isMonthly);
-  const plan = useSelector((state) => state.plan.plan);
+  const { isMonthly, plan } = useSelector((state) => state.plan);
 
   const plans = [
     {
