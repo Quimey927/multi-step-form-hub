@@ -1,16 +1,17 @@
 .step-actions {
   position: absolute;
   bottom: 2rem;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-inline: 10%;
+  padding: 1rem;
 }
 
 .backBtn {
   background-color: transparent;
   color: var(--color-cool-gray);
   transition: color 0.3s ease;
+  padding: 0;
 }
 
 .backBtn:is(:hover, :focus) {
@@ -40,5 +41,6 @@
 @media (min-width: 860px) {
   .step-actions {
     right: 0;
+    padding: 1.5rem;
   }
 }
