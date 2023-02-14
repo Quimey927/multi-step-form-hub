@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 import Sidebar from './components/Sidebar/Sidebar';
 import MainContent from './components/MainContent/MainContent';
@@ -8,6 +9,7 @@ import './App.css';
 
 const App = () => {
   const [deviceWidth, setDeviceWidth] = useState(null);
+  const step = useSelector((state) => state.step.step);
 
   // This useEffect is to get the initial devide width. It only runs on the first render
   // because React guaranties us that setDeviceWidth will never change.
@@ -27,7 +29,7 @@ const App = () => {
     <Container className="app">
       <Sidebar />
       <MainContent />
-      <StepActions />
+      {step !== 5 && <StepActions />}
     </Container>
   );
 
@@ -36,7 +38,7 @@ const App = () => {
       <Sidebar />
       <div className="right-column">
         <MainContent />
-        <StepActions />
+        {step !== 5 && <StepActions />}
       </div>
     </Container>
   );
