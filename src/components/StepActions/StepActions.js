@@ -9,10 +9,6 @@ const StepActions = () => {
   const step = useSelector((state) => state.step.step);
   const dispatch = useDispatch();
 
-  const handleConfirm = () => {
-    console.log('Confirmed!');
-  };
-
   const decrementStepHandler = () => {
     dispatch(stepActions.decrementStep());
   };
@@ -35,7 +31,7 @@ const StepActions = () => {
           Next Step
         </Button>
       ) : (
-        <Button className={classes.confirmBtn} onClick={handleConfirm}>
+        <Button className={classes.confirmBtn} onClick={incrementStepHandler}>
           Confirm
         </Button>
       )}
