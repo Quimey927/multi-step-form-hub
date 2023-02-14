@@ -5,6 +5,7 @@ import PersonalInfoForm from './PersonalInfoForm/PersonalInfoForm';
 import SelectingPlan from './SelectingPlan/SelectingPlan';
 import AddOns from './AddOns/AddOns';
 import FinishingUp from './FinishingUp/FinishingUp';
+import ThankYou from './ThankYou/ThankYou';
 import Container from '../UI/Container/Container';
 import classes from './MainContent.module.css';
 
@@ -36,14 +37,21 @@ const MainContent = () => {
 
   return (
     <Container className={classes['main-content']}>
-      <h2 className={classes.title}>{stepsTitleAndSubtitle[step - 1].title}</h2>
-      <p className={classes.subtitle}>
-        {stepsTitleAndSubtitle[step - 1].subtitle}
-      </p>
+      {step !== 5 && (
+        <h2 className={classes.title}>
+          {stepsTitleAndSubtitle[step - 1].title}
+        </h2>
+      )}
+      {step !== 5 && (
+        <p className={classes.subtitle}>
+          {stepsTitleAndSubtitle[step - 1].subtitle}
+        </p>
+      )}
       {step === 1 && <PersonalInfoForm />}
       {step === 2 && <SelectingPlan />}
       {step === 3 && <AddOns />}
       {step === 4 && <FinishingUp />}
+      {step === 5 && <ThankYou />}
     </Container>
   );
 };
