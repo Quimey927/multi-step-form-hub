@@ -1,0 +1,77 @@
+.container {
+  background-color: var(--color-magnolia);
+  padding: 1.5rem;
+}
+
+.container * {
+  font-size: 0.8rem;
+  color: var(--color-cool-gray);
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan__info h5 {
+  color: var(--color-marine-blue);
+  margin-block: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.plan__info button {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  outline-color: transparent;
+  text-decoration: underline;
+  margin-top: 0.3rem;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.plan__price {
+  color: var(--color-marine-blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-light-blue);
+  margin-block: 1.5rem;
+}
+
+.addOn {
+  display: flex;
+  justify-content: space-between;
+}
+.addOn + .addOn {
+  margin-top: 1rem;
+}
+
+.addOn__price {
+  color: var(--color-marine-blue-opaque);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 1.5rem;
+}
+
+.total__desc {
+  color: var(--color-cool-gray);
+}
+
+.total__price {
+  color: var(--color-purplish-blue);
+  font-size: 1rem;
+  font-weight: 700;
+}
