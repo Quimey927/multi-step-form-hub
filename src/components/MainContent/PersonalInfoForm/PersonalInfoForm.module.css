@@ -16,6 +16,9 @@
   border-radius: 8px;
   border: 1px solid var(--color-light-gray);
   outline: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-marine-blue);
 }
 
 .form-group input:focus {
@@ -26,4 +29,19 @@
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--color-cool-gray);
+}
+
+.form-group input.invalid {
+  border-color: var(--color-strawberry-red);
+}
+
+.input-error {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-error__message {
+  font-size: 0.85rem;
+  color: var(--color-strawberry-red);
+  font-weight: 500;
 }
