@@ -26,11 +26,17 @@
   border: none;
   background-color: transparent;
   outline-color: transparent;
-  text-decoration: underline;
+  border-bottom: 2px solid var(--color-light-gray);
   margin-top: 0.3rem;
   padding: 0;
   font: inherit;
   cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.plan__info button:is(:hover, :active) {
+  color: var(--color-purplish-blue);
+  border-color: var(--color-purplish-blue);
 }
 
 .plan__price {
