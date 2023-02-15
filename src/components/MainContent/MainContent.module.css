@@ -38,6 +38,10 @@
     box-shadow: none;
   }
 
+  .min-height-on-final-step {
+    height: 100%;
+  }
+
   .step-actions {
     right: 0;
   }

@@ -35,23 +35,26 @@ const stepsTitleAndSubtitle = [
 const MainContent = () => {
   const step = useSelector((state) => state.step.step);
 
+  if (step === 5) {
+    return (
+      <Container
+        className={`${classes['main-content']} ${classes['min-height-on-final-step']}`}
+      >
+        <ThankYou />
+      </Container>
+    );
+  }
+
   return (
     <Container className={classes['main-content']}>
-      {step !== 5 && (
-        <h2 className={classes.title}>
-          {stepsTitleAndSubtitle[step - 1].title}
-        </h2>
-      )}
-      {step !== 5 && (
-        <p className={classes.subtitle}>
-          {stepsTitleAndSubtitle[step - 1].subtitle}
-        </p>
-      )}
+      <h2 className={classes.title}>{stepsTitleAndSubtitle[step - 1].title}</h2>
+      <p className={classes.subtitle}>
+        {stepsTitleAndSubtitle[step - 1].subtitle}
+      </p>
       {step === 1 && <PersonalInfoForm />}
       {step === 2 && <SelectingPlan />}
       {step === 3 && <AddOns />}
       {step === 4 && <FinishingUp />}
-      {step === 5 && <ThankYou />}
     </Container>
   );
 };
