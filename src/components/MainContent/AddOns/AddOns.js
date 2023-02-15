@@ -1,12 +1,14 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import AddOn from './AddOn/AddOn';
+import { addOnsActions } from '../../../store/addOnsSlice';
 import classes from './AddOns.module.css';
 
 const AddOns = () => {
   const isMonthly = useSelector((state) => state.plan.isMonthly);
   const addOnsStates = useSelector((state) => state.addOns);
+  const dispatch = useDispatch();
 
   const addOns = [
     {
@@ -35,6 +37,7 @@ const AddOns = () => {
           title={elem.title}
           description={elem.description}
           price={elem.price}
+          onClick={() => dispatch(addOnsActions.toggleAddOn(elem.title))}
         />
       ))}
     </div>
