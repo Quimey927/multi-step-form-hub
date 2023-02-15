@@ -7,7 +7,7 @@ const Step = (props) => {
   const step = useSelector((state) => state.step.step);
 
   const numberClasses =
-    step === props.number
+    step === props.number || (step === 5 && props.number === 4)
       ? `${classes.number} ${classes.active}`
       : `${classes.number}`;
 
