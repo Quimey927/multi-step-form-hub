@@ -17,6 +17,9 @@ body {
 
 .right-column {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (min-width: 860px) {
