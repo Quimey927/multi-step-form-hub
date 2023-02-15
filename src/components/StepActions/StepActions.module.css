@@ -15,7 +15,7 @@
   padding: 0;
 }
 
-.backBtn:is(:hover, :focus) {
+.backBtn:is(:hover, :active) {
   color: var(--color-marine-blue);
 }
 
@@ -25,7 +25,7 @@
   transition: background-color 0.3s ease;
 }
 
-.nextBtn:is(:hover, :focus) {
+.nextBtn:is(:hover, :active) {
   background-color: var(--color-marine-blue-opaque);
 }
 
@@ -35,8 +35,17 @@
   transition: background-color 0.3s ease;
 }
 
-.confirmBtn:is(:hover, :focus) {
+.confirmBtn:is(:hover, :active) {
   background-color: var(--color-purplish-blue-opaque);
+}
+
+.submit-button {
+  padding: 0;
+}
+
+.label {
+  display: block;
+  padding: 0.85em 1.75em;
 }
 
 @media (min-width: 860px) {
