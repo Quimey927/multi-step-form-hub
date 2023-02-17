@@ -8,6 +8,7 @@
   padding: 2rem 1.5rem;
   background-color: white;
   box-shadow: 0 8px 16px var(--color-light-gray);
+  max-width: 500px;
 }
 
 .title {
@@ -33,12 +34,19 @@
   margin: 0;
 }
 
+@media (min-width: calc(500px + 3rem)) {
+  .main-content {
+    margin-inline: auto;
+  }
+}
+
 @media (min-width: 860px) {
   .main-content {
     top: 0;
     margin-inline: 0;
     margin-bottom: 0;
     box-shadow: none;
+    max-width: none;
   }
 
   .min-height-on-final-step {
