@@ -18,6 +18,7 @@
 .backBtn:is(:hover, :active) {
   color: var(--color-marine-blue);
 }
+
 .backBtn:focus {
   padding-inline: 0.5rem;
   transform: translateX(-0.5rem);
