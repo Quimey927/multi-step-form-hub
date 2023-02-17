@@ -133,11 +133,14 @@ const PersonalInfoForm = () => {
           />
         </div>
 
-        <input
+        <button
           type="submit"
           id="submit-form"
           style={{ visibility: 'hidden' }}
-        />
+          tabIndex="-1"
+        >
+          Submit
+        </button>
       </form>
     </Container>
   );

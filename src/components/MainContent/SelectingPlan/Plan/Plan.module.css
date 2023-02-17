@@ -3,12 +3,17 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  border: 1px solid var(--color-light-gray);
+  outline: 1px solid var(--color-light-gray);
   cursor: pointer;
 }
 
+.plan:focus-within {
+  outline-color: transparent;
+  outline: 2px solid var(--color-marine-blue) !important;
+}
+
 .plan:hover {
-  border: 1px solid var(--color-marine-blue);
+  outline: 1px solid var(--color-marine-blue);
 }
 
 .plan__icon {
@@ -36,6 +41,10 @@
   font-size: 0.7rem;
   font-weight: 500;
   margin-bottom: 0;
+}
+
+.input:focus {
+  outline: none;
 }
 
 @media (min-width: 860px) {

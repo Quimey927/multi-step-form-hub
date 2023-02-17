@@ -39,6 +39,10 @@
   border-color: var(--color-purplish-blue);
 }
 
+.plan__info button:focus {
+  outline: 2px solid var(--color-marine-blue);
+}
+
 .plan__price {
   color: var(--color-marine-blue);
   font-weight: 700;

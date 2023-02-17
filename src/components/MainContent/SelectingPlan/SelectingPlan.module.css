@@ -18,7 +18,8 @@
 }
 
 .switch-button__checkbox {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 
 .switch-button__label {
@@ -29,6 +30,11 @@
   background-color: var(--color-marine-blue);
   position: relative;
   cursor: pointer;
+}
+
+.switch-button:has(input:focus) .switch-button__label {
+  outline-color: transparent;
+  box-shadow: 0 0 0 1px white, 0 0 0 3px var(--color-marine-blue);
 }
 
 .switch-button__label::before {

@@ -27,13 +27,20 @@ const StepActions = () => {
         <button style={{ visibility: 'hidden' }}></button>
       )}
       {step === 1 ? (
-        <Button className={`${classes.nextBtn} ${classes['submit-button']}`}>
+        <Button
+          className={`${classes.nextBtn} ${classes['submit-button']}`}
+          tabIndex="-1"
+        >
           <label htmlFor="submit-form" className={classes.label} tabIndex="0">
             Next Step
           </label>
         </Button>
       ) : step !== 4 ? (
-        <Button className={classes.nextBtn} onClick={incrementStepHandler}>
+        <Button
+          className={classes.nextBtn}
+          onClick={incrementStepHandler}
+          tabIndex="-1"
+        >
           Next Step
         </Button>
       ) : (

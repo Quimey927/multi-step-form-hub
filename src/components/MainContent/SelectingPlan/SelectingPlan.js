@@ -26,7 +26,7 @@ const SelectingPlan = () => {
 
   return (
     <>
-      <div className={classes.plans}>
+      <form className={classes.plans}>
         {plans.map((elem) => (
           <Plan
             key={elem.plan}
@@ -38,10 +38,11 @@ const SelectingPlan = () => {
               dispatch(planActions.setPlan(elem.plan));
               dispatch(planActions.setPrice(elem.price));
             }}
+            tabIndex="0"
           />
         ))}
-      </div>
-      <div className={classes.period}>
+      </form>
+      <form className={classes.period}>
         <span className={isMonthly ? classes['active-period'] : ''}>
           Monthly
         </span>
@@ -49,6 +50,7 @@ const SelectingPlan = () => {
           <input
             className={classes['switch-button__checkbox']}
             type="checkbox"
+            role="switch"
             id="switch"
             checked={!isMonthly}
             onChange={() => dispatch(planActions.togglePeriod())}
@@ -61,7 +63,7 @@ const SelectingPlan = () => {
         <span className={!isMonthly ? classes['active-period'] : ''}>
           Yearly
         </span>
-      </div>
+      </form>
     </>
   );
 };

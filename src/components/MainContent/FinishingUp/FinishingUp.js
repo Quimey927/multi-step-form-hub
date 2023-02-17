@@ -54,7 +54,13 @@ const FinishingUp = () => {
         <div className={classes.plan}>
           <div className={classes['plan__info']}>
             <h5>{`${plan} (${isMonthly ? 'Monthly' : 'Yearly'})`}</h5>
-            <button onClick={changeHandler}>Change</button>
+            <button
+              onClick={changeHandler}
+              role="switch"
+              aria-checked={!isMonthly}
+            >
+              Change
+            </button>
           </div>
           <div className={classes['plan__price']}>{`$${planPrice}/${
             isMonthly ? 'mo' : 'yr'

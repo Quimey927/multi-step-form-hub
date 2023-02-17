@@ -21,6 +21,10 @@
   color: var(--color-marine-blue);
 }
 
+.form-group input:is(:hover, :active) {
+  border: 1px solid var(--color-marine-blue);
+}
+
 .form-group input:focus {
   border: 1px solid var(--color-marine-blue);
 }

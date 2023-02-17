@@ -1,17 +1,25 @@
 .add-on {
-  border: 1px solid var(--color-light-gray);
+  outline: 1px solid var(--color-light-gray);
   display: flex;
   padding: 1rem;
   gap: 0.5rem;
   cursor: pointer;
 }
 
+.add-on:hover {
+  outline: 1px solid var(--color-marine-blue);
+}
+
+.add-on:focus-within {
+  outline: 2px solid var(--color-marine-blue) !important;
+}
+
 .add-on input {
   cursor: pointer;
 }
 
-.add-on:hover {
-  border: 1px solid var(--color-marine-blue);
+.add-on input:focus {
+  outline-color: transparent;
 }
 
 .add-on__description {

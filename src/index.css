@@ -14,7 +14,11 @@
   --color-white: hsl(0, 0%, 100%);
 }
 
+*:focus {
+  outline: none;
+}
+
 .selected-item {
-  border: 1px solid var(--color-marine-blue);
+  outline: 1px solid var(--color-marine-blue) !important;
   background-color: var(--color-magnolia);
 }
