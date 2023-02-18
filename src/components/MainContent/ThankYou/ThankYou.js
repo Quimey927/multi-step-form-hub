@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Icon from '../../../assets/images/icon-arcade.svg';
+import Icon from '../../../assets/images/icon-thank-you.svg';
 
 import classes from './ThankYou.module.css';
 
