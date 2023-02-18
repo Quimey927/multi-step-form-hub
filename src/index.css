@@ -19,6 +19,6 @@
 }
 
 .selected-item {
-  outline: 1px solid var(--color-marine-blue) !important;
+  outline: 1px solid var(--color-marine-blue);
   background-color: var(--color-magnolia);
 }

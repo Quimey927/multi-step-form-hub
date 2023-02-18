@@ -7,13 +7,12 @@
   cursor: pointer;
 }
 
-.plan:focus-within {
-  outline-color: transparent;
-  outline: 2px solid var(--color-marine-blue) !important;
-}
-
 .plan:hover {
   outline: 1px solid var(--color-marine-blue);
+}
+
+.plan:focus-within {
+  outline: 2px solid var(--color-marine-blue);
 }
 
 .plan__icon {
