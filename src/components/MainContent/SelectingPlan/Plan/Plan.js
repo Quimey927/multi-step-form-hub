@@ -18,7 +18,6 @@ const Plan = (props) => {
         value={props.plan}
         style={{ opacity: 0, position: 'absolute' }}
         checked={props.plan === currentPlan}
-        role="toolbar"
         onChange={() => {}}
       />
       <img
