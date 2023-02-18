@@ -34,13 +34,14 @@
   transition: all 0.1s ease;
 }
 
-.plan__info button:is(:hover, :active) {
+.plan__info button:is(:hover, :active, :focus) {
   color: var(--color-purplish-blue);
   border-color: var(--color-purplish-blue);
 }
 
 .plan__info button:focus {
-  outline: 2px solid var(--color-marine-blue);
+  outline: 2px solid var(--color-purplish-blue);
+  border-bottom-color: transparent;
 }
 
 .plan__price {
