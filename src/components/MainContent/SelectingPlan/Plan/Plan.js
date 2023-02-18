@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 
 import Container from '../../../UI/Container/Container';
 import classes from './Plan.module.css';
-import Icon from '../../../../assets/images/icon-arcade.svg';
 
 const Plan = (props) => {
   const currentPlan = useSelector((state) => state.plan.plan);
@@ -22,7 +21,7 @@ const Plan = (props) => {
       />
       <img
         className={classes['plan__icon']}
-        src={Icon}
+        src={props.icon}
         alt={`${props.plan} icon`}
       />
       <div className={classes['plan__info']}>

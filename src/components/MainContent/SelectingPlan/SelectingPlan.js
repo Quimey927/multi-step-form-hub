@@ -4,6 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import Plan from './Plan/Plan';
 import { planActions } from '../../../store/planSlice';
 import classes from './SelectingPlan.module.css';
+import ArcadeIcon from '../../../assets/images/icon-arcade.svg';
+import AdvancedIcon from '../../../assets/images/icon-advanced.svg';
+import ProIcon from '../../../assets/images/icon-pro.svg';
 
 const SelectingPlan = () => {
   const dispatch = useDispatch();
@@ -13,14 +16,17 @@ const SelectingPlan = () => {
     {
       plan: 'Arcade',
       price: isMonthly ? '$9/mo' : '$90/yr',
+      icon: ArcadeIcon,
     },
     {
       plan: 'Advanced',
       price: isMonthly ? '$12/mo' : '$120/yr',
+      icon: AdvancedIcon,
     },
     {
       plan: 'Pro',
       price: isMonthly ? '$15/mo' : '$150/yr',
+      icon: ProIcon,
     },
   ];
 
@@ -34,11 +40,11 @@ const SelectingPlan = () => {
             plan={elem.plan}
             price={elem.price}
             isMonthly={isMonthly}
+            icon={elem.icon}
             onClick={() => {
               dispatch(planActions.setPlan(elem.plan));
               dispatch(planActions.setPrice(elem.price));
             }}
-            tabIndex="0"
           />
         ))}
       </form>
