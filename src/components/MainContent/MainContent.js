@@ -37,9 +37,7 @@ const MainContent = () => {
 
   if (step === 5) {
     return (
-      <Container
-        className={`${classes['main-content']} ${classes['min-height-on-final-step']}`}
-      >
+      <Container className={classes['main-content']}>
         <ThankYou />
       </Container>
     );

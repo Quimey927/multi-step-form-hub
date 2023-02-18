@@ -29,7 +29,7 @@ const App = () => {
     <Container className="app">
       <Sidebar />
       <MainContent />
-      {step !== 5 && <StepActions />}
+      {step !== 1 && step !== 5 && <StepActions />}
     </Container>
   );
 
@@ -38,12 +38,12 @@ const App = () => {
       <Sidebar />
       <div className="right-column">
         <MainContent />
-        {step !== 5 && <StepActions />}
+        {step !== 1 && step !== 5 && <StepActions />}
       </div>
     </Container>
   );
 
-  if (deviceWidth <= 860) {
+  if (deviceWidth <= 765) {
     return mobileStructure;
   }
 

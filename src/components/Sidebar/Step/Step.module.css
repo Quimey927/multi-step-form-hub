@@ -45,7 +45,7 @@
   letter-spacing: 1px;
 }
 
-@media (min-width: 860px) {
+@media (min-width: 765px) {
   .step {
     margin-top: 2rem;
     margin-left: 1rem;

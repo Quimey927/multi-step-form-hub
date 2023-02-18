@@ -5,6 +5,7 @@ import useInput from '../../../hooks/useInput';
 import Container from '../../UI/Container/Container';
 import { infoActions } from '../../../store/infoSlice';
 import { stepActions } from '../../../store/stepSlice';
+import Button from '../../UI/Button/Button';
 import classes from './PersonalInfoForm.module.css';
 
 const PersonalInfoForm = () => {
@@ -71,7 +72,7 @@ const PersonalInfoForm = () => {
   };
 
   return (
-    <Container>
+    <Container className={classes.container}>
       <form className={classes.form} onSubmit={handleSubmit}>
         <div className={classes['form-group']}>
           <div className={classes['input-error']}>
@@ -133,14 +134,7 @@ const PersonalInfoForm = () => {
           />
         </div>
 
-        <button
-          type="submit"
-          id="submit-form"
-          style={{ visibility: 'hidden' }}
-          tabIndex="-1"
-        >
-          Submit
-        </button>
+        <Button type="submit">Next Step</Button>
       </form>
     </Container>
   );

@@ -48,13 +48,8 @@
   padding: 0;
 }
 
-.label {
-  display: block;
-  padding: 0.85em 1.75em;
-}
-
-@media (min-width: 860px) {
+@media (min-width: 765px) {
   .step-actions {
-    padding: 1.5rem;
+    padding: 1.5rem 2.5rem;
   }
 }

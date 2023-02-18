@@ -10,7 +10,7 @@
   padding-top: 1.5em;
 }
 
-@media (min-width: 860px) {
+@media (min-width: 765px) {
   .sidebar {
     background-image: url('../../assets/images/bg-sidebar-desktop.svg');
     background-position: bottom;

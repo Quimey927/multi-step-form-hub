@@ -19,28 +19,11 @@ const StepActions = () => {
 
   return (
     <div className={classes['step-actions']}>
-      {step !== 1 ? (
-        <Button className={classes.backBtn} onClick={decrementStepHandler}>
-          Go Back
-        </Button>
-      ) : (
-        <button style={{ visibility: 'hidden' }}></button>
-      )}
-      {step === 1 ? (
-        <Button
-          className={`${classes.nextBtn} ${classes['submit-button']}`}
-          tabIndex="-1"
-        >
-          <label htmlFor="submit-form" className={classes.label} tabIndex="0">
-            Next Step
-          </label>
-        </Button>
-      ) : step !== 4 ? (
-        <Button
-          className={classes.nextBtn}
-          onClick={incrementStepHandler}
-          tabIndex="-1"
-        >
+      <Button className={classes.backBtn} onClick={decrementStepHandler}>
+        Go Back
+      </Button>
+      {step === 2 || step === 3 ? (
+        <Button className={classes.nextBtn} onClick={incrementStepHandler}>
           Next Step
         </Button>
       ) : (
