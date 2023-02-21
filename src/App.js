@@ -11,16 +11,18 @@ const App = () => {
   const [deviceWidth, setDeviceWidth] = useState(null);
   const step = useSelector((state) => state.step.step);
 
-  // This useEffect is to get the initial devide width. It only runs on the first render
-  // because React guaranties us that setDeviceWidth will never change.
   useEffect(() => {
     setDeviceWidth(window.innerWidth);
+
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
   }, [setDeviceWidth]);
 
-  // This useEffect is to get the new device width if the user resizes his screen.
   useEffect(() => {
     function handleResize() {
       setDeviceWidth(window.innerWidth);
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
     window.addEventListener('resize', handleResize);
   });

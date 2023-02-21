@@ -12,7 +12,8 @@ body {
 
 .app {
   position: relative;
-  min-height: 100vh;
+  min-height: 100vh; /* fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .right-column {
@@ -22,7 +23,8 @@ body {
 
 @media (min-width: 765px) {
   body {
-    min-height: 100vh;
+    min-height: 100vh; /* fallback */
+    min-height: calc(var(--vh, 1vh) * 100);
     display: grid;
     align-items: center;
   }
