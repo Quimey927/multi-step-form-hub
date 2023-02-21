@@ -61,14 +61,21 @@
   font-weight: 500;
 }
 
+.next-step {
+  background-color: #fff;
+  width: calc(100% + 2rem);
+  padding: 1rem;
+  position: absolute;
+  right: -1rem;
+  top: calc(calc(var(--vh, 1vh) * 100) - 2rem - 170px + 95px - 39px);
+  display: flex;
+  justify-content: flex-end;
+}
+
 .form button {
   color: white;
   background-color: var(--color-marine-blue);
   transition: background-color 0.3s ease;
-  position: absolute;
-  right: 0;
-  top: calc(100vh - 1rem - 170px + 95px - 39px);
-  bottom: auto;
 }
 
 .form button:is(:hover, :active) {
@@ -80,7 +87,12 @@
 }
 
 @media (min-width: 765px) {
+  .next-step {
+    position: static;
+  }
+
   .form button {
+    position: absolute;
     right: 1.5rem;
     bottom: 1.5rem;
     top: auto;

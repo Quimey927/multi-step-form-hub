@@ -134,7 +134,9 @@ const PersonalInfoForm = () => {
           />
         </div>
 
-        <Button type="submit">Next Step</Button>
+        <div className={classes['next-step']}>
+          <Button type="submit">Next Step</Button>
+        </div>
       </form>
     </Container>
   );
